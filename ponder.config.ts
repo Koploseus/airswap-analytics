@@ -12,7 +12,7 @@ export default createConfig({
       abi: SwapERC20Abi,
       address: "0xd82FA167727a4dc6D6F55830A2c47aBbB4b3a0F8",
       network: "mainnet",
-      startBlock: 16776806,
+      startBlock: 19760873,
     },
   },
 });

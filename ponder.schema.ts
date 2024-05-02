@@ -1,8 +1,10 @@
 import { createSchema } from "@ponder/core";
 
 export default createSchema((p) => ({
-  Example: p.createTable({
+  AirSwapSwap: p.createTable({
     id: p.string(),
-    name: p.string().optional(),
+    senderToken: p.string(),
+    senderAmount: p.bigint(),
+    blockNumber: p.bigint(),
   }),
 }));
