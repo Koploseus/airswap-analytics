@@ -21,9 +21,12 @@ ponder.on("SwapERC20:SwapERC20", async ({ event, context }) => {
   await AirSwapSwap.create({
     id: event.log.id,
     data: {
+      chainId: context.network.chainId,
       senderToken: event.args.senderToken,
       senderAmount: event.args.senderAmount,
-      blockNumber: event.block.number
+      blockNumber: event.block.number,
+      makers: event.args.signerWallet,
+      date: event.block.timestamp
     },
   });
 });
